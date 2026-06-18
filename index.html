@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dotyk Młodości — Gabinet Kosmetologiczny | Wygiełzów k. Babic</title>
+<meta name="description" content="Dotyk Młodości — profesjonalny gabinet kosmetologiczny mgr Anny Mistarz w Wygiełzowie. Kosmetyka, podologia, mezoterapia, Oxygeneo, RF mikroigłowa i depilacja laserowa. Zarezerwuj wizytę online.">
+<link rel="icon" type="image/jpeg" href="images/logo.jpg">
+<link rel="canonical" href="https://dotykmlodosci.pl/index.html">
+<meta property="og:title" content="Dotyk Młodości — Gabinet Kosmetologiczny w Wygiełzowie">
+<meta property="og:description" content="Pielęgnacja, która przywraca skórze młodość. Nowoczesne zabiegi w sercu Małopolski.">
+<meta property="og:type" content="website">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        greige: '#7B7A78', taupe: '#9A938B', mist: '#C9C3BB',
+        sand: '#E8E3DC', cream: '#F5F2ED', ink: '#2D2B29', rose: '#B79A8E'
+      },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'serif'],
+        body: ['"Jost"', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #F5F2ED; }
+  .tracking-luxe { letter-spacing: 0.35em; }
+  .tracking-wide2 { letter-spacing: 0.18em; }
+  .reveal { opacity: 0; transform: translateY(34px); transition: opacity 1.1s cubic-bezier(.22,1,.36,1), transform 1.1s cubic-bezier(.22,1,.36,1); }
+  .reveal.in { opacity: 1; transform: none; }
+  .reveal[data-delay="1"]{ transition-delay:.12s }
+  .reveal[data-delay="2"]{ transition-delay:.24s }
+  .reveal[data-delay="3"]{ transition-delay:.36s }
+  .reveal[data-delay="4"]{ transition-delay:.48s }
+  .nav-link { position: relative; }
+  .nav-link::after { content:''; position:absolute; left:0; bottom:-6px; width:0; height:1px; background:#2D2B29; transition: width .4s ease; }
+  .nav-link:hover::after, .active-link::after { width:100%; }
+  .active-link { color:#2D2B29; }
+  .hero-veil { background: radial-gradient(120% 90% at 50% 0%, rgba(245,242,237,0) 40%, rgba(123,122,120,.55) 100%), linear-gradient(180deg, rgba(45,43,41,.32), rgba(45,43,41,.55)); }
+  .petal { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  .float-slow { animation: floaty 7s ease-in-out infinite; }
+  @keyframes floaty { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-12px) } }
+  .card-lift { transition: transform .6s cubic-bezier(.22,1,.36,1), box-shadow .6s ease; }
+  .card-lift:hover { transform: translateY(-10px); box-shadow: 0 30px 60px -30px rgba(45,43,41,.4); }
+  .menu-panel { transition: transform .5s cubic-bezier(.22,1,.36,1), opacity .4s ease; }
+  @media (prefers-reduced-motion: reduce){ .reveal{opacity:1;transform:none;transition:none} .float-slow{animation:none} }
+  .btn-prim { transition: all .45s cubic-bezier(.22,1,.36,1); }
+  .btn-prim:hover { background:#2D2B29; color:#F5F2ED; letter-spacing:.28em; }
+  .ken { animation: ken 22s ease-in-out infinite alternate; }
+  @keyframes ken { from{ transform: scale(1) translateY(0)} to{ transform: scale(1.12) translateY(-2%)} }
+
+  /* --- Oferta dropdown: smooth reveal --- */
+  .dropdown-panel { opacity:0; visibility:hidden; transform:translateY(10px); pointer-events:none;
+    transition: opacity .35s cubic-bezier(.22,1,.36,1), transform .45s cubic-bezier(.22,1,.36,1), visibility 0s linear .35s; }
+  .group:hover .dropdown-panel, .dropdown-panel:hover { opacity:1; visibility:visible; transform:translateY(0); pointer-events:auto; transition-delay:0s; }
+  .dropdown-inner { transform:scaleY(.96); opacity:0; transition: transform .4s cubic-bezier(.22,1,.36,1), opacity .35s ease; }
+  .group:hover .dropdown-inner { transform:scaleY(1); opacity:1; }
+  .dropdown-item { opacity:0; transform:translateY(6px); transition: opacity .4s ease, transform .4s cubic-bezier(.22,1,.36,1), padding-left .3s ease, background-color .3s ease; }
+  .group:hover .dropdown-item { opacity:1; transform:translateY(0); }
+  .group:hover .dropdown-item:nth-child(1){ transition-delay:.04s }
+  .group:hover .dropdown-item:nth-child(2){ transition-delay:.08s }
+  .group:hover .dropdown-item:nth-child(3){ transition-delay:.12s }
+  .group:hover .dropdown-item:nth-child(4){ transition-delay:.16s }
+  .group:hover .dropdown-item:nth-child(5){ transition-delay:.20s }
+  .group:hover .dropdown-item:nth-child(6){ transition-delay:.24s }
+  @media (prefers-reduced-motion:reduce){
+    .dropdown-panel,.dropdown-inner,.dropdown-item{ transition:opacity .2s ease!important; transform:none!important }
+  }
+</style>
+</head>
+<body class="font-body text-ink antialiased">
+
+<!-- ====================== HEADER ====================== -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-50 transition-all duration-500">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="flex items-center justify-between h-20">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <img src="images/logo.jpg" alt="Dotyk Młodości — logo" class="h-12 w-12 rounded-full object-cover ring-1 ring-white/40 shadow-md transition-transform duration-500 group-hover:scale-105">
+        <span class="hidden sm:block font-display text-xl tracking-wide2 leading-none header-brand">Dotyk Młodości</span>
+      </a>
+      <nav class="hidden lg:flex items-center gap-9 text-[13px] tracking-wide2 uppercase header-nav">
+        <a href="index.html" class="nav-link active-link">Strona główna</a>
+        <a href="o-nas.html" class="nav-link">O nas</a>
+        <div class="relative group">
+          <a href="oferta.html" class="nav-link flex items-center gap-1">Oferta
+            <svg class="w-3 h-3 mt-[2px] transition-transform group-hover:rotate-180" viewBox="0 0 12 12" fill="none"><path d="M2 4l4 4 4-4" stroke="currentColor" stroke-width="1.3"/></svg>
+          </a>
+          <div class="dropdown-panel absolute left-1/2 -translate-x-1/2 top-full pt-4">
+            <div class="dropdown-inner w-60 bg-cream shadow-2xl ring-1 ring-ink/10 py-3 origin-top">
+              <a href="oferta/kosmetyka.html" class="dropdown-item block px-6 py-2.5 text-[12px] tracking-wide2 hover:bg-sand hover:pl-7 transition-all duration-300">Kosmetyka</a>
+              <a href="oferta/podologia.html" class="dropdown-item block px-6 py-2.5 text-[12px] tracking-wide2 hover:bg-sand hover:pl-7 transition-all duration-300">Podologia</a>
+              <a href="oferta/mezoterapia.html" class="dropdown-item block px-6 py-2.5 text-[12px] tracking-wide2 hover:bg-sand hover:pl-7 transition-all duration-300">Mezoterapia</a>
+              <a href="oferta/oxygeneo.html" class="dropdown-item block px-6 py-2.5 text-[12px] tracking-wide2 hover:bg-sand hover:pl-7 transition-all duration-300">Oxygeneo</a>
+              <a href="oferta/rf-mikroiglowa.html" class="dropdown-item block px-6 py-2.5 text-[12px] tracking-wide2 hover:bg-sand hover:pl-7 transition-all duration-300">RF Mikroigłowa</a>
+              <a href="oferta/depilacja-laserowa.html" class="dropdown-item block px-6 py-2.5 text-[12px] tracking-wide2 hover:bg-sand hover:pl-7 transition-all duration-300">Depilacja laserowa</a>
+            </div>
+          </div>
+        </div>
+        <a href="galeria.html" class="nav-link">Galeria</a>
+        <a href="kontakt.html" class="nav-link">Kontakt</a>
+        <a href="zapisy.html" class="btn-prim border border-ink/70 px-6 py-2.5 tracking-wide2 text-ink">Zapisy</a>
+      </nav>
+      <button id="burger" aria-label="Otwórz menu" class="lg:hidden relative z-50 w-10 h-10 flex flex-col items-center justify-center gap-[6px]">
+        <span class="burger-line block w-7 h-[1.5px] bg-ink transition-all duration-300"></span>
+        <span class="burger-line block w-7 h-[1.5px] bg-ink transition-all duration-300"></span>
+        <span class="burger-line block w-7 h-[1.5px] bg-ink transition-all duration-300"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ====================== MOBILE MENU ====================== -->
+<div id="mobile-menu" class="fixed inset-0 z-40 lg:hidden opacity-0 invisible menu-panel">
+  <div class="absolute inset-0 bg-cream"></div>
+  <div class="relative h-full flex flex-col items-center justify-center gap-7 text-center px-8">
+    <a href="index.html" class="font-display text-3xl tracking-wide2 text-ink">Strona główna</a>
+    <a href="o-nas.html" class="font-display text-3xl tracking-wide2 text-ink/80">O nas</a>
+    <a href="oferta.html" class="font-display text-3xl tracking-wide2 text-ink/80">Oferta</a>
+    <div class="flex flex-wrap justify-center gap-x-5 gap-y-1 text-[12px] tracking-wide2 uppercase text-greige -mt-3">
+      <a href="oferta/kosmetyka.html">Kosmetyka</a><span>·</span>
+      <a href="oferta/podologia.html">Podologia</a><span>·</span>
+      <a href="oferta/mezoterapia.html">Mezoterapia</a><span>·</span>
+      <a href="oferta/oxygeneo.html">Oxygeneo</a><span>·</span>
+      <a href="oferta/rf-mikroiglowa.html">RF Mikroigłowa</a><span>·</span>
+      <a href="oferta/depilacja-laserowa.html">Depilacja laserowa</a>
+    </div>
+    <a href="galeria.html" class="font-display text-3xl tracking-wide2 text-ink/80">Galeria</a>
+    <a href="kontakt.html" class="font-display text-3xl tracking-wide2 text-ink/80">Kontakt</a>
+    <a href="zapisy.html" class="mt-4 border border-ink px-10 py-3 tracking-luxe text-sm uppercase">Zapisy</a>
+  </div>
+</div>
+
+<!-- ====================== HERO ====================== -->
+<section class="relative h-screen min-h-[640px] flex items-center justify-center overflow-hidden">
+  <div class="absolute inset-0 ken bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?q=80&w=2000&auto=format&fit=crop');"></div>
+  <div class="absolute inset-0 hero-veil"></div>
+  <div class="relative text-center text-cream px-6 max-w-3xl">
+    <svg class="float-slow w-16 h-16 mx-auto mb-8 reveal in" viewBox="0 0 120 120" fill="none" stroke="#F5F2ED" stroke-width="1.4">
+      <path d="M60 30 C66 42 66 50 60 58 C54 50 54 42 60 30Z"/>
+      <path d="M60 58 C48 48 38 48 30 54 C40 66 52 66 60 58Z"/>
+      <path d="M60 58 C72 48 82 48 90 54 C80 66 68 66 60 58Z"/>
+      <path d="M60 60 C50 70 48 80 52 90 C60 84 64 72 60 60Z" opacity=".85"/>
+      <path d="M60 60 C70 70 72 80 68 90 C60 84 56 72 60 60Z" opacity=".85"/>
+    </svg>
+    <p class="reveal in tracking-luxe text-[11px] sm:text-xs uppercase text-cream/80 mb-6" data-delay="1">Gabinet Kosmetologiczny · Wygiełzów</p>
+    <h1 class="reveal in font-display font-light text-5xl sm:text-6xl md:text-7xl leading-[1.05] mb-7" data-delay="2">Pielęgnacja, która<br>przywraca młodość</h1>
+    <p class="reveal in max-w-xl mx-auto text-cream/85 font-light leading-relaxed mb-10" data-delay="3">Indywidualne podejście, sprawdzone technologie i spokój małopolskiego zakątka. Tu skóra odzyskuje blask, a Ty — czas dla siebie.</p>
+    <div class="reveal in flex flex-col sm:flex-row items-center justify-center gap-4" data-delay="4">
+      <a href="zapisy.html" class="bg-cream text-ink px-10 py-4 tracking-wide2 uppercase text-xs hover:bg-ink hover:text-cream transition-all duration-500">Umów wizytę</a>
+      <a href="oferta.html" class="border border-cream/70 text-cream px-10 py-4 tracking-wide2 uppercase text-xs hover:bg-cream/10 transition-all duration-500">Poznaj ofertę</a>
+    </div>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-cream/70 text-[10px] tracking-luxe uppercase animate-pulse">Przewiń</div>
+</section>
+
+<!-- ====================== INTRO / PHILOSOPHY ====================== -->
+<section class="py-28 lg:py-36 bg-cream">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10 grid lg:grid-cols-12 gap-14 items-center">
+    <div class="lg:col-span-5 reveal">
+      <div class="overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?q=80&w=1400&auto=format&fit=crop" alt="Wnętrze gabinetu Dotyk Młodości" class="w-full h-[520px] object-cover">
+      </div>
+    </div>
+    <div class="lg:col-span-7 lg:pl-8">
+      <p class="reveal tracking-luxe text-[11px] uppercase text-taupe mb-5">Filozofia gabinetu</p>
+      <h2 class="reveal font-display text-4xl md:text-5xl font-light leading-tight mb-8" data-delay="1">Kosmetologia rozumiana jako troska, nie tylko zabieg</h2>
+      <p class="reveal text-greige leading-loose mb-6 font-light" data-delay="2">Dotyk Młodości prowadzi mgr Anna Mistarz — kosmetolog, dla której każda skóra to osobna historia. Zamiast gotowych schematów dobieramy zabiegi do realnych potrzeb, etapu życia i oczekiwań.</p>
+      <p class="reveal text-greige leading-loose mb-10 font-light" data-delay="3">Łączymy delikatność rytuału pielęgnacyjnego z precyzją nowoczesnych urządzeń — od mezoterapii i Oxygeneo, po RF mikroigłową i depilację laserową.</p>
+      <a href="o-nas.html" class="reveal nav-link inline-block text-sm tracking-wide2 uppercase" data-delay="4">Poznaj historię gabinetu →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== SERVICES ====================== -->
+<section class="py-28 lg:py-36 bg-sand">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <p class="reveal tracking-luxe text-[11px] uppercase text-taupe mb-5">Nasza oferta</p>
+      <h2 class="reveal font-display text-4xl md:text-5xl font-light" data-delay="1">Zabiegi, którym możesz zaufać</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="oferta/kosmetyka.html" class="card-lift reveal group bg-cream p-9 block" data-delay="1">
+        <span class="font-display text-2xl text-rose">01</span>
+        <h3 class="font-display text-2xl mt-3 mb-3">Kosmetyka</h3>
+        <p class="text-greige font-light leading-relaxed text-sm">Pielęgnacja twarzy, oczyszczanie, peelingi i rytuały dla zdrowej, promiennej skóry.</p>
+        <span class="mt-6 inline-block text-[11px] tracking-wide2 uppercase text-ink group-hover:translate-x-1 transition-transform">Zobacz →</span>
+      </a>
+      <a href="oferta/podologia.html" class="card-lift reveal group bg-cream p-9 block" data-delay="2">
+        <span class="font-display text-2xl text-rose">02</span>
+        <h3 class="font-display text-2xl mt-3 mb-3">Podologia</h3>
+        <p class="text-greige font-light leading-relaxed text-sm">Specjalistyczna opieka nad stopami — od pielęgnacji po terapię problemów skórnych.</p>
+        <span class="mt-6 inline-block text-[11px] tracking-wide2 uppercase text-ink group-hover:translate-x-1 transition-transform">Zobacz →</span>
+      </a>
+      <a href="oferta/mezoterapia.html" class="card-lift reveal group bg-cream p-9 block" data-delay="3">
+        <span class="font-display text-2xl text-rose">03</span>
+        <h3 class="font-display text-2xl mt-3 mb-3">Mezoterapia</h3>
+        <p class="text-greige font-light leading-relaxed text-sm">Mikroiniekcje odżywczych koktajli, które nawadniają i rewitalizują skórę od wewnątrz.</p>
+        <span class="mt-6 inline-block text-[11px] tracking-wide2 uppercase text-ink group-hover:translate-x-1 transition-transform">Zobacz →</span>
+      </a>
+      <a href="oferta/oxygeneo.html" class="card-lift reveal group bg-cream p-9 block" data-delay="1">
+        <span class="font-display text-2xl text-rose">04</span>
+        <h3 class="font-display text-2xl mt-3 mb-3">Oxygeneo</h3>
+        <p class="text-greige font-light leading-relaxed text-sm">Trójdziałanie: złuszczanie, dotlenienie i odżywienie w jednym kojącym zabiegu.</p>
+        <span class="mt-6 inline-block text-[11px] tracking-wide2 uppercase text-ink group-hover:translate-x-1 transition-transform">Zobacz →</span>
+      </a>
+      <a href="oferta/rf-mikroiglowa.html" class="card-lift reveal group bg-cream p-9 block" data-delay="2">
+        <span class="font-display text-2xl text-rose">05</span>
+        <h3 class="font-display text-2xl mt-3 mb-3">RF Mikroigłowa</h3>
+        <p class="text-greige font-light leading-relaxed text-sm">Fala radiowa i mikroigły — ujędrnienie, wygładzenie i widoczna odbudowa skóry.</p>
+        <span class="mt-6 inline-block text-[11px] tracking-wide2 uppercase text-ink group-hover:translate-x-1 transition-transform">Zobacz →</span>
+      </a>
+      <a href="oferta/depilacja-laserowa.html" class="card-lift reveal group bg-cream p-9 block" data-delay="3">
+        <span class="font-display text-2xl text-rose">06</span>
+        <h3 class="font-display text-2xl mt-3 mb-3">Depilacja laserowa</h3>
+        <p class="text-greige font-light leading-relaxed text-sm">Trwała redukcja owłosienia w komforcie i z dbałością o bezpieczeństwo skóry.</p>
+        <span class="mt-6 inline-block text-[11px] tracking-wide2 uppercase text-ink group-hover:translate-x-1 transition-transform">Zobacz →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== STATS / TRUST ====================== -->
+<section class="py-24 bg-greige text-cream">
+  <div class="mx-auto max-w-6xl px-6 lg:px-10 grid grid-cols-2 md:grid-cols-4 gap-10 text-center">
+    <div class="reveal"><p class="font-display text-5xl mb-2">5,0</p><p class="text-[11px] tracking-wide2 uppercase text-cream/70">Średnia ocena Booksy</p></div>
+    <div class="reveal" data-delay="1"><p class="font-display text-5xl mb-2">75+</p><p class="text-[11px] tracking-wide2 uppercase text-cream/70">Opinii klientek</p></div>
+    <div class="reveal" data-delay="2"><p class="font-display text-5xl mb-2">6</p><p class="text-[11px] tracking-wide2 uppercase text-cream/70">Obszarów zabiegowych</p></div>
+    <div class="reveal" data-delay="3"><p class="font-display text-5xl mb-2">100%</p><p class="text-[11px] tracking-wide2 uppercase text-cream/70">Indywidualnego podejścia</p></div>
+  </div>
+</section>
+
+<!-- ====================== TESTIMONIAL ====================== -->
+<section class="py-28 lg:py-36 bg-cream">
+  <div class="mx-auto max-w-3xl px-6 text-center">
+    <svg class="w-10 h-10 mx-auto mb-8 text-rose reveal" viewBox="0 0 24 24" fill="currentColor"><path d="M9 7H5a1 1 0 00-1 1v4a1 1 0 001 1h3v3a3 3 0 01-3 3v2a5 5 0 005-5V8a1 1 0 00-1-1zm10 0h-4a1 1 0 00-1 1v4a1 1 0 001 1h3v3a3 3 0 01-3 3v2a5 5 0 005-5V8a1 1 0 00-1-1z"/></svg>
+    <p class="reveal font-display text-3xl md:text-4xl font-light leading-snug mb-8" data-delay="1">„Pani Ania perfekcyjna w każdym względzie. Polecam wszystkim gabinet, wszystkie usługi i każdą z Pań."</p>
+    <p class="reveal text-[11px] tracking-luxe uppercase text-taupe" data-delay="2">— Zadowolona klientka, opinie Booksy</p>
+  </div>
+</section>
+
+<!-- ====================== CTA ====================== -->
+<section class="relative py-32 overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?q=80&w=2000&auto=format&fit=crop');"></div>
+  <div class="absolute inset-0 bg-ink/55"></div>
+  <div class="relative text-center text-cream max-w-2xl mx-auto px-6">
+    <h2 class="reveal font-display text-4xl md:text-5xl font-light mb-6">Twój moment dla siebie zaczyna się tutaj</h2>
+    <p class="reveal text-cream/85 font-light mb-10" data-delay="1">Zarezerwuj termin online przez Booksy lub zadzwoń — pomożemy dobrać idealny zabieg.</p>
+    <a href="zapisy.html" class="reveal inline-block bg-cream text-ink px-12 py-4 tracking-wide2 uppercase text-xs hover:bg-rose hover:text-cream transition-all duration-500" data-delay="2">Zarezerwuj wizytę</a>
+  </div>
+</section>
+
+<!-- ====================== FOOTER ====================== -->
+<footer class="bg-ink text-cream/80 pt-20 pb-10">
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 grid md:grid-cols-4 gap-12">
+    <div class="md:col-span-2">
+      <div class="flex items-center gap-3 mb-5">
+        <img src="images/logo.jpg" alt="Dotyk Młodości" class="h-11 w-11 rounded-full object-cover">
+        <span class="font-display text-xl tracking-wide2 text-cream">Dotyk Młodości</span>
+      </div>
+      <p class="font-light leading-relaxed max-w-sm text-cream/70">Gabinet kosmetologiczny mgr Anny Mistarz. Nowoczesna pielęgnacja w sercu Małopolski.</p>
+    </div>
+    <div>
+      <p class="text-[11px] tracking-luxe uppercase text-cream/50 mb-5">Nawigacja</p>
+      <ul class="space-y-3 text-sm font-light">
+        <li><a href="index.html" class="hover:text-cream transition">Strona główna</a></li>
+        <li><a href="o-nas.html" class="hover:text-cream transition">O nas</a></li>
+        <li><a href="oferta.html" class="hover:text-cream transition">Oferta</a></li>
+        <li><a href="galeria.html" class="hover:text-cream transition">Galeria</a></li>
+        <li><a href="zapisy.html" class="hover:text-cream transition">Zapisy</a></li>
+        <li><a href="kontakt.html" class="hover:text-cream transition">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-[11px] tracking-luxe uppercase text-cream/50 mb-5">Kontakt</p>
+      <ul class="space-y-3 text-sm font-light">
+        <li>ul. Lipowiecka 3<br>32-551 Wygiełzów</li>
+        <li><a href="tel:+48579061091" class="hover:text-cream transition">+48 579 061 091</a></li>
+      </ul>
+      <div class="flex gap-4 mt-6">
+        <a href="https://www.facebook.com/dotykmlodosci" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-cream transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12a10 10 0 10-11.5 9.9v-7H8v-2.9h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6v1.9h2.8L15.8 15h-2.3v7A10 10 0 0022 12z"/></svg></a>
+        <a href="https://www.instagram.com/dotyk_mlodosci/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-cream transition"><svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1.1.1-1.7.2-2.1.4-.5.2-.9.4-1.3.8-.4.4-.6.8-.8 1.3-.2.4-.3 1-.4 2.1C2.6 9.5 2.6 9.9 2.6 13s0 3.5.1 4.7c.1 1.1.2 1.7.4 2.1.2.5.4.9.8 1.3.4.4.8.6 1.3.8.4.2 1 .3 2.1.4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1.1-.1 1.7-.2 2.1-.4.5-.2.9-.4 1.3-.8.4-.4.6-.8.8-1.3.2-.4.3-1 .4-2.1.1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1.1-.2-1.7-.4-2.1-.2-.5-.4-.9-.8-1.3-.4-.4-.8-.6-1.3-.8-.4-.2-1-.3-2.1-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 8.1a3.2 3.2 0 100-6.4 3.2 3.2 0 000 6.4zm6.2-8.3a1.1 1.1 0 11-2.3 0 1.1 1.1 0 012.3 0z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto max-w-7xl px-6 lg:px-10 mt-14 pt-8 border-t border-cream/10 flex flex-col sm:flex-row justify-between gap-3 text-[11px] tracking-wide2 uppercase text-cream/40">
+    <span>© 2026 Dotyk Młodości · mgr Anna Mistarz</span>
+    <span>Wygiełzów · Małopolska</span>
+  </div>
+</footer>
+
+<!-- ====================== JSON-LD ====================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "Dotyk Młodości — Gabinet Kosmetologiczny mgr Anna Mistarz",
+  "image": "https://dotykmlodosci.pl/images/logo.jpg",
+  "description": "Gabinet kosmetologiczny oferujący kosmetykę, podologię, mezoterapię, Oxygeneo, RF mikroigłową i depilację laserową w Wygiełzowie.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ul. Lipowiecka 3",
+    "addressLocality": "Wygiełzów",
+    "postalCode": "32-551",
+    "addressCountry": "PL"
+  },
+  "telephone": "+48579061091",
+  "url": "https://dotykmlodosci.pl",
+  "priceRange": "$$",
+  "sameAs": [
+    "https://www.facebook.com/dotykmlodosci",
+    "https://www.instagram.com/dotyk_mlodosci/",
+    "https://booksy.com/pl-pl/92218_dotyk-mlodosci_salon-kosmetyczny_10142_babice"
+  ]
+}
+</script>
+
+<!-- ====================== SCRIPT ====================== -->
+<script>
+  // Header background on scroll
+  const header = document.getElementById('site-header');
+  const brand = document.querySelector('.header-brand');
+  const navWrap = document.querySelector('.header-nav');
+  function onScroll(){
+    if(window.scrollY > 40){
+      header.classList.add('bg-cream','shadow-sm');
+      document.querySelectorAll('.header-nav a, .header-brand').forEach(e=>e.classList.add('text-ink'));
+    } else {
+      header.classList.remove('bg-cream','shadow-sm');
+    }
+  }
+  // On non-hero pages the header stays solid (handled by data attr)
+  const heroless = document.body.dataset.solidHeader === 'true';
+  if(heroless){ header.classList.add('bg-cream','shadow-sm'); }
+  else { window.addEventListener('scroll', onScroll); onScroll(); }
+
+  // Mobile menu
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('mobile-menu');
+  let open = false;
+  burger.addEventListener('click', ()=>{
+    open = !open;
+    menu.classList.toggle('opacity-0', !open);
+    menu.classList.toggle('invisible', !open);
+    document.querySelectorAll('.burger-line')[0].style.transform = open ? 'translateY(7.5px) rotate(45deg)' : '';
+    document.querySelectorAll('.burger-line')[1].style.opacity = open ? '0' : '1';
+    document.querySelectorAll('.burger-line')[2].style.transform = open ? 'translateY(-7.5px) rotate(-45deg)' : '';
+    document.body.style.overflow = open ? 'hidden' : '';
+  });
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal:not(.in)').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
